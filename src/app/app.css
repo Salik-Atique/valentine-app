@@ -121,3 +121,92 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   object-fit: cover;
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    max-height: 90vh;
+    padding: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .question h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .buttons {
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .yes-btn, .no-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .gif,
+  .reaction-gif img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .reaction-gif {
+    margin: 15px 0;
+  }
+
+  .accepted h1,
+  .accepted h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    max-width: 350px;
+    padding: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .question h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .buttons {
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  .yes-btn, .no-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .gif,
+  .reaction-gif img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .reaction-gif {
+    margin: 10px 0;
+  }
+
+  .accepted h1,
+  .accepted h2 {
+    font-size: 1.5rem;
+  }
+}
