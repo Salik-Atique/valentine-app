@@ -1,6 +1,13 @@
-# ValentineApp
+# Valentine's Proposal App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+A fun Angular application that asks "Will you be my Valentine?" with interactive Yes/No buttons.
+
+## Features
+
+- Romantic Valentine's Day themed UI
+- Interactive buttons with changing "No" responses
+- Growing "Yes" button after multiple "No" clicks
+- Celebration GIF when "Yes" is selected
 
 ## Development server
 
