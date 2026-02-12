@@ -10,7 +10,8 @@ import { RouterOutlet } from '@angular/router';
 export class App {
   protected readonly title = signal('valentine-app');
 
-  isAccepted = false;
+  isAccepted = signal(false);
+  showingIntermediateMessage = signal(false);
   noClickCount = 0;
   noMessages = ['No', 'Think again!', 'You are hurting me', 'Please!', 'Are you sure?', 'Last chance'];
   currentNoText = 'No';
@@ -26,7 +27,11 @@ export class App {
   currentGif = 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjB6YXA0cjY4a2plM3o5cmY1cWRlMmJhNmVjMG40a2Jpc2N0cmNqciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wvYNSqBAMDVx8CEYkt/giphy.gif';
 
   onYes() {
-    this.isAccepted = true;
+    this.showingIntermediateMessage.set(true);
+    // After 3 seconds, transition to the final acceptance screen
+    setTimeout(() => {
+      this.isAccepted.set(true);
+    }, 3700);
   }
 
   onNo() {
